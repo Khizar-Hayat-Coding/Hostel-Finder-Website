@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #1ABC9C;
+    color: white;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #000000;
+    transition: all 2s;
+}
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    max-width: 100%;
+    height: 100px;
+}
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #00ffd5;
+}
+
+.listings {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.listings h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.listings .container {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.listings .hostel-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.listings .container:last-child {
+    margin-bottom: 0;
+}
+
+.hostel-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+
+.hostel-card {
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.search-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-section input,
+.search-section select,
+.search-section button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1rem;
+}
+
+.search-section input,
+.search-section select {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-section button {
+    background-color: #1ABC9C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-section button:hover {
+    background-color: #16A085;
+}
+
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.contact .container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact .container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 1.5rem;
+}
+
+.contact .container input,
+.contact .container textarea,
+.contact .container button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+.contact .container input:focus,
+.contact .container textarea:focus {
+    border-color: #1abc9c;
+    outline: none;
+}
+
+.contact .container button {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact .container button:hover {
+    background-color: #24534a;
+}
+
+.contact .container textarea {
+    resize: none;
+    height: 100px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1ABC9C;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        flex-direction: column;
+        z-index: 1000;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+    }
+
+    .search-section input,
+    .search-section select,
+    .search-section button {
+        width: 100%; 
+        max-width: none;  
+    }
+
+}
+
+
+footer {
+    background-color: #1ABC9C;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 18px;
+    color: black;
+}
+
+footer .footer-links {
+    margin: 10px 0;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+footer .footer-links a:hover {
+    color: #000000;
+    transition: all 2s;
+}
+
+footer .copyright {
+    margin-top: 10px;
+    color: #000000;
+}

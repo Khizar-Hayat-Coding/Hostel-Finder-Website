@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Finder - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Hostel Finder</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hostel.html">Hostels</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Hostel In Karachi</h1>
+            <p>Search and explore the best hostels at affordable prices in karachi.</p>
+
+            <div class="search-section">
+                <div class="container">
+                    <h2>Search Hostels</h2>
+                    <input type="text" id="search-input" placeholder="Search by hostel name">
+                    <select id="price-filter">
+                        <option value="all">All Prices</option>
+                        <option value="11500">Up to 12,000 PKR</option>
+                        <option value="16000">Up to 20,000 PKR</option>
+                        <option value="22500">Up to 25,000 PKR</option>
+                        <option value="27000">Up to 30,000 PKR</option>
+                    </select>
+                    <button onclick="filterHostels()">Search</button>
+
+                    <div id="filtered-hostels">
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Hostel Finder. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="hostel.html">Hostels</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">
+                Designed by Khizar.
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="script.js">
+
+    </script>
+
+</body>
+
+</html>
